@@ -627,7 +627,7 @@ Licensed under the BSD-2-Clause License.
       _results = [];
       _y2axeind = -1;
       if (this.options.yaxes) {
-      	this.options.yaxes.indexOf("y2");
+      	_y2axeind = this.options.yaxes.indexOf("y2");
       }
       if (_y2axeind<0) {
         _y2axeind = 0;
