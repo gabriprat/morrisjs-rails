@@ -1068,6 +1068,19 @@ Licensed under the BSD-2-Clause License.
             }
             return _results1;
           }).call(this);
+	  if (true || this.options.continuousLine) {
+	      coords = (function() {
+	        var _j, _len, _results1;
+	        _results1 = [];
+	        for (_j = 0, _len = coords.length; _j < _len; _j++) {
+	          c = coords[_j];
+	          if (c.y !== null) {
+	            _results1.push(c);
+	          }
+	        }
+	        return _results1;
+	      })();
+	    }
           if (coords.length > 1) {
             _results.push(Morris.Line.createPath(coords, smooth, this.bottom));
           } else {
