@@ -639,10 +639,14 @@ Licensed under the BSD-2-Clause License.
         if ((_ref2 = this.options.axes) === true || _ref2 === 'both' || _ref2 === 'y') {
           if (!this.options.horizontal) {
             this.drawYAxisLabel(basePos, pos, this.yAxisFormat(lineY));
-            this.drawYAxisLabel(basePos2, pos, this.yAxisFormat(lineY2, _y2axeind), 'start');
+	    if (_y2axeind > 0) {
+            	this.drawYAxisLabel(basePos2, pos, this.yAxisFormat(lineY2, _y2axeind), 'start');
+	    }
           } else {
             this.drawXAxisLabel(pos, basePos, this.yAxisFormat(lineY));
-            this.drawXAxisLabel(pos, basePos2, this.yAxisFormat(lineY2, _y2axeind), 'start');
+	    if (_y2axeind > 0) {
+            	this.drawXAxisLabel(pos, basePos2, this.yAxisFormat(lineY2, _y2axeind), 'start');
+	    }
           }
         }
         if (this.options.grid) {
